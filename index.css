@@ -6,29 +6,139 @@ body {
     font-family: "Outfit", serif;
     font-optical-sizing: auto;
     font-weight: 400;
-    font-style: normal;
     font-size: 16px;
+    color: hsl(30, 10%, 34%);
     margin: 0;
-}
-
-h1 {
-    font-family: "Young Serif", serif;
-    font-style: normal;
-    font-weight: 400;
 }
 
 img {
     width: 100%;
 }
 
+h1, h2 {
+    font-family: "Young Serif", serif;
+}
+
+h1 {
+    font-size: 2.25rem;
+    color: hsl(24, 5%, 18%);
+}
+
+h2 {
+    color: hsl(14, 45%, 36%);
+    font-size: 1.75rem;
+}
+
+h3 {
+    color: hsl(332, 51%, 32%);
+    font-weight: 600;
+}
+
+p {
+    line-height: 1.5;
+}
+
+.container {
+    padding: 0 2.5em;
+}
+
+.side-bar {
+    background: rgba(251, 223, 236, 0.3);
+    padding: 0.25em 1.5em 0.25em 3em;
+    letter-spacing: 0.25px;
+}
+
+.instructions li::marker {
+    color: hsl(14, 45%, 36%);
+    font-weight: 600;
+}
+
+.ingredients li:not(:last-child),
+.instructions li:not(:last-child) {
+    margin-bottom: 0.5em;
+}
+
+.ingredients li:last-child,
+.instructions li:last-child {
+    margin-bottom: 1.75em;
+}
+
+.ingredients ul,
+.instructions ol {
+    border-bottom: 1px dotted hsl(30, 10%, 34%);
+}
+
+p,
+.side-bar ul,
+.ingredients ul,
+.instructions ol {
+    font-weight: 350;
+    font-size: 1.05rem;
+}
+
+.side-bar ul,
+.ingredients ul,
+.instructions ol {
+    padding: 0 1.5em;
+    line-height: 1.75;
+}
+
+.side-bar li,
+.ingredients li,
+.instructions li {
+    padding-left: 0.75em;
+}
+
 @media (min-width: 376px) {
-    img {
-        border-radius: 0.65em;
-    }
     .container {
         max-width: 670px;
         margin: 0 auto;
     }
 }
+
+@media (min-width: 670px) {
+    .side-bar {
+        border-radius: 0.75em;
+        padding: 0.5em 2em;
+        margin: 0 2.5em;
+    }
+}
+
+@media (min-width: 768px) {
+    body {
+        background-color: hsl(30, 54%, 90%);
+    }
+    header {
+        padding-top: 2em;
+        max-width: 574px;
+        margin: 0 auto;
+    }
+    img {
+        display: inline-block;
+        border-radius: 0.65em;
+    }
+    .recipe-card {
+        margin: 8em auto;
+        padding-bottom: 2em;
+        background-color: white;
+        max-width: 650px;
+        border-radius: 1em;
+    }
+    .container {
+        padding: 0 3em;
+    }
+    .side-bar ul,
+    .ingredients ul,
+    .instructions ol {
+        padding: 0 2em;
+    }
+    .side-bar li,
+    .ingredients li,
+    .instructions li {
+        padding-left: 1em;
+    }
+}
+
+
 
 
